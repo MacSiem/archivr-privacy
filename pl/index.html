@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka prywatności — Archvr</title>
+    <link rel="alternate" hreflang="pl" href="https://macsiem.github.io/archvr-privacy/pl/">
+    <link rel="alternate" hreflang="en" href="https://macsiem.github.io/archvr-privacy/en/">
+    <link rel="alternate" hreflang="x-default" href="https://macsiem.github.io/archvr-privacy/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #fff; }
+        h1 { color: #1e40af; margin-top: 40px; margin-bottom: 10px; font-size: 2.5em; }
+        h1:first-of-type { margin-top: 0; }
+        h2 { color: #1e3a8a; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em; }
+        h3 { color: #1e3a8a; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #1e40af; text-decoration: none; border-bottom: 1px solid #1e40af; }
+        a:hover { color: #1e3a8a; }
+        strong { color: #1e3a8a; }
+        code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+        .lang-switcher { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0; font-size: 0.95em; }
+        .lang-switcher a { margin: 0 8px; font-weight: 500; }
+        .lang-switcher .active { color: #333; border-bottom: none; font-weight: 700; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666; font-size: 0.9em; }
+        .updated { color: #666; font-style: italic; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <a class="active">Polski</a> | <a href="../en/">English</a>
+    </div>
+
+    <h1>Polityka prywatności — Archvr</h1>
+    <p class="updated">Ostatnia aktualizacja: 1 maja 2026</p>
+
+    <h2>1. Wprowadzenie</h2>
+    <p><strong>Archvr</strong> to mobilna aplikacja do pakowania, rozpakowywania i zabezpieczania hasłem archiwów (ZIP, 7z, TAR, TAR.GZ, RAR-read). Prywatność jest fundamentem produktu: aplikacja działa <strong>lokalnie na urządzeniu</strong>, pliki użytkownika <strong>nigdy nie są wysyłane na serwer</strong>, a hasła do archiwów nie są nigdzie zapisywane.</p>
+    <p>Administratorem aplikacji jest Maciej Siemiński (kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>).</p>
+
+    <h2>2. Jakie dane przetwarzamy</h2>
+
+    <h3>2.1 Pliki użytkownika i ich zawartość</h3>
+    <p>Wybrane przez Ciebie pliki, archiwa oraz dane wewnątrz nich są przetwarzane <strong>wyłącznie lokalnie na Twoim urządzeniu</strong>. Operator aplikacji nie ma do nich dostępu, nie są przesyłane do żadnego serwera ani nie są kopiowane do chmury. Operacje pakowania, rozpakowywania, dodawania i usuwania hasła wykonują się w pamięci urządzenia.</p>
+
+    <h3>2.2 Hasła do archiwów</h3>
+    <p>Hasła wpisywane przez Ciebie do zaszyfrowania archiwum lub odszyfrowania archiwum są używane <strong>tylko podczas konkretnej operacji</strong> i czyszczone z pamięci natychmiast po jej zakończeniu. Archvr <strong>nie zapisuje</strong> haseł w pamięci urządzenia (ani w SecureStore, ani w pamięci aplikacji, ani w historii). Każda operacja wymaga ponownego wpisania hasła.</p>
+
+    <h3>2.3 Lokalna historia operacji</h3>
+    <p>Aplikacja przechowuje na Twoim urządzeniu historię ostatnich operacji (do 50 wpisów) w formie metadanych: nazwa pliku archiwum, format, rozmiar, data operacji, informacja czy operacja używała hasła (tak/nie). <strong>Historia nie zawiera haseł, nie zawiera zawartości plików ani archiwów.</strong> Możesz w każdej chwili usunąć pojedynczy wpis lub całą historię w ustawieniach aplikacji.</p>
+
+    <h3>2.4 Dane diagnostyczne (Sentry)</h3>
+    <p>Aby wykrywać awarie i poprawiać stabilność aplikacji, korzystamy z usługi <strong>Sentry</strong> (sentry.io). Sentry zbiera:</p>
+    <ul>
+        <li>stack trace błędów (crash logs);</li>
+        <li>informacje o urządzeniu (model, wersja systemu, locale);</li>
+        <li>wersję aplikacji i build number.</li>
+    </ul>
+    <p>Sentry <strong>nie</strong> zbiera nazw plików, zawartości archiwów, haseł ani treści historii operacji. Dane diagnostyczne są przechowywane do 90 dni.</p>
+
+    <h3>2.5 Reklamy (AdMob)</h3>
+    <p>Archvr w wersji bezpłatnej wyświetla nieinwazyjne reklamy bannerowe oraz pełnoekranowe (interstitial) po zakończeniu operacji pakowania/rozpakowywania. Reklamy <strong>nie są wyświetlane</strong> na ekranach Premium, podczas onboardingu ani w trakcie aktywnej operacji na pliku. Reklamy są dostarczane przez <strong>Google AdMob</strong>, które w ramach swojego SDK:</p>
+    <ul>
+        <li>zbiera <strong>identyfikator reklamowy</strong> (Android Advertising ID / Apple IDFA), który jest udostępniany Google w celu serwowania reklam;</li>
+        <li>zbiera dane diagnostyczne urządzenia (model, ogólna lokalizacja na poziomie kraju, język).</li>
+    </ul>
+    <p>Domyślnie wyświetlamy reklamy <strong>niespersonalizowane</strong>. Identyfikator reklamowy możesz w każdej chwili zresetować w ustawieniach Androida lub iOS. Reklamy wyłączysz jednorazowym zakupem IAP „Lifetime — Remove Ads" lub subskrypcją „Annual — Remove Ads".</p>
+    <p>Nigdy nie sprzedajemy danych osobowych stronom trzecim.</p>
+
+    <h3>2.6 Zakupy w aplikacji (IAP)</h3>
+    <p>Płatności i odnowienia subskrypcji są obsługiwane wyłącznie przez <strong>Apple App Store</strong> (iOS) lub <strong>Google Play</strong> (Android). Archvr nie przetwarza ani nie przechowuje danych karty płatniczej, adresów rozliczeniowych ani innych szczegółów płatności. Aplikacja przechowuje lokalnie wyłącznie status zakupu (np. „premium aktywny", „subskrypcja aktywna do daty").</p>
+
+    <h3>2.7 Uprawnienia na urządzeniu</h3>
+    <ul>
+        <li><strong>Pliki / Dokumenty</strong>: dostęp do plików wybranych przez Ciebie w celu pakowania/rozpakowywania (iOS: <code>NSDocumentsFolderUsageDescription</code>; Android: scoped storage, brak osobnego uprawnienia).</li>
+        <li><strong>Galeria zdjęć</strong> (opcjonalnie): pakowanie zdjęć z biblioteki (iOS: <code>NSPhotoLibraryUsageDescription</code>; Android: <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>).</li>
+        <li><strong>App Tracking Transparency</strong> (iOS): pytanie o zgodę na śledzenie reklamowe (<code>NSUserTrackingUsageDescription</code>) — możesz odmówić; reklamy nadal działają, ale jako niespersonalizowane.</li>
+        <li><strong>Identyfikator reklamowy Android</strong>: <code>com.google.android.gms.permission.AD_ID</code>.</li>
+    </ul>
+    <p>Każde uprawnienie jest proszone kontekstowo i możesz go odmówić bez utraty dostępu do podstawowych funkcji aplikacji.</p>
+
+    <h2>3. Podstawy prawne (RODO)</h2>
+    <p>Dla użytkowników w Unii Europejskiej:</p>
+    <ul>
+        <li>wykonanie umowy (art. 6 ust. 1 lit. b RODO) — podstawowe funkcje aplikacji;</li>
+        <li>prawnie uzasadniony interes (art. 6 ust. 1 lit. f RODO) — diagnostyka Sentry, niespersonalizowane reklamy AdMob;</li>
+        <li>zgoda (art. 6 ust. 1 lit. a RODO) — śledzenie reklamowe ATT na iOS (możesz odmówić; nie-spersonalizowane reklamy są domyślne).</li>
+    </ul>
+
+    <h2>4. Twoje prawa (RODO)</h2>
+    <p>W zakresie danych przetwarzanych przez Archvr i podmioty trzecie (Sentry, Google AdMob, Apple, Google Play) masz prawo do:</p>
+    <ul>
+        <li>dostępu do swoich danych;</li>
+        <li>sprostowania danych;</li>
+        <li>usunięcia danych („prawo do bycia zapomnianym");</li>
+        <li>ograniczenia przetwarzania;</li>
+        <li>przenoszenia danych;</li>
+        <li>wniesienia sprzeciwu wobec przetwarzania;</li>
+        <li>cofnięcia zgody w dowolnym momencie (jeśli przetwarzanie odbywało się na podstawie zgody);</li>
+        <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</li>
+    </ul>
+    <p>Aby zrealizować swoje prawa wobec Archvr, skontaktuj się: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Dane diagnostyczne Sentry zostaną usunięte po Twoim żądaniu w ciągu 30 dni. Lokalna historia operacji jest pod Twoją pełną kontrolą — usuń ją w ustawieniach aplikacji lub odinstaluj aplikację, aby usunąć wszystkie dane lokalne.</p>
+
+    <h2>5. Dzieci</h2>
+    <p>Archvr nie jest skierowany do dzieci poniżej 13. roku życia. Nie zbieramy świadomie danych dzieci poniżej tego wieku. Jeśli rodzic/opiekun zauważy, że dziecko korzystało z aplikacji i zostały zebrane jego dane, prosimy o kontakt: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> — usuniemy dane niezwłocznie.</p>
+
+    <h2>6. Strony trzecie</h2>
+    <ul>
+        <li><strong>Google AdMob</strong> (Google LLC) — reklamy i identyfikator reklamowy. Polityka: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+        <li><strong>Sentry</strong> (Functional Software, Inc.) — diagnostyka. Polityka: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a>.</li>
+        <li><strong>Apple App Store</strong> (Apple Inc.) — dystrybucja i płatności iOS. Polityka: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</li>
+        <li><strong>Google Play</strong> (Google LLC) — dystrybucja i płatności Android. Polityka: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+    </ul>
+
+    <h2>7. Bezpieczeństwo</h2>
+    <p>Archvr używa standardu <strong>AES-256</strong> dla szyfrowania archiwów ZIP i 7z z hasłem. Hasła nie są zapisywane na urządzeniu. Wszystkie operacje na plikach odbywają się lokalnie, w sandboxie aplikacji.</p>
+    <p>Aplikacja nie wymaga konta, logowania ani połączenia z internetem do wykonywania operacji pakowania, rozpakowywania ani zarządzania hasłem (poza pobieraniem reklam i okazjonalnymi zapytaniami diagnostycznymi Sentry).</p>
+
+    <h2>8. Zmiany polityki</h2>
+    <p>Niniejsza polityka może być aktualizowana wraz z rozwojem aplikacji. Istotne zmiany są komunikowane w aplikacji oraz w sklepach Apple App Store / Google Play. Data ostatniej aktualizacji widnieje na początku tej strony.</p>
+
+    <h2>9. Kontakt</h2>
+    <p>Pytania, prośby o realizację praw RODO, zgłoszenia naruszeń: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+    <footer>
+        <p>© 2026 Maciej Siemiński. Archvr.</p>
+    </footer>
+</div>
+</body>
+</html>

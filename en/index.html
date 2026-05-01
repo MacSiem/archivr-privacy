@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Archvr</title>
+    <link rel="alternate" hreflang="pl" href="https://macsiem.github.io/archvr-privacy/pl/">
+    <link rel="alternate" hreflang="en" href="https://macsiem.github.io/archvr-privacy/en/">
+    <link rel="alternate" hreflang="x-default" href="https://macsiem.github.io/archvr-privacy/">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; line-height: 1.6; color: #333; background-color: #fafafa; }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; background-color: #fff; }
+        h1 { color: #1e40af; margin-top: 40px; margin-bottom: 10px; font-size: 2.5em; }
+        h1:first-of-type { margin-top: 0; }
+        h2 { color: #1e3a8a; margin-top: 30px; margin-bottom: 15px; font-size: 1.5em; }
+        h3 { color: #1e3a8a; margin-top: 20px; margin-bottom: 10px; font-size: 1.2em; }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-left: 25px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        a { color: #1e40af; text-decoration: none; border-bottom: 1px solid #1e40af; }
+        a:hover { color: #1e3a8a; }
+        strong { color: #1e3a8a; }
+        code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+        .lang-switcher { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #e0e0e0; font-size: 0.95em; }
+        .lang-switcher a { margin: 0 8px; font-weight: 500; }
+        .lang-switcher .active { color: #333; border-bottom: none; font-weight: 700; }
+        footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666; font-size: 0.9em; }
+        .updated { color: #666; font-style: italic; margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="lang-switcher">
+        <a href="../pl/">Polski</a> | <a class="active">English</a>
+    </div>
+
+    <h1>Privacy Policy — Archvr</h1>
+    <p class="updated">Last updated: May 1, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p><strong>Archvr</strong> is a mobile app for packing, unpacking and password-protecting archives (ZIP, 7z, TAR, TAR.GZ, RAR-read). Privacy is foundational to the product: the app runs <strong>locally on your device</strong>, your files <strong>never leave your phone</strong> for our servers, and archive passwords are never stored anywhere.</p>
+    <p>The data controller is Maciej Siemiński (contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>).</p>
+
+    <h2>2. What data we process</h2>
+
+    <h3>2.1 Your files and their content</h3>
+    <p>Files, archives and their content selected by you are processed <strong>exclusively on your device</strong>. The app operator has no access to them, they are never sent to any server or backed up to the cloud. Pack, unpack, add-password and remove-password operations all happen in device memory.</p>
+
+    <h3>2.2 Archive passwords</h3>
+    <p>Passwords you type to encrypt or decrypt an archive are used <strong>only during that specific operation</strong> and cleared from memory immediately after it completes. Archvr <strong>does not store</strong> passwords on the device (not in SecureStore, not in app memory, not in history). Each operation requires re-entering the password.</p>
+
+    <h3>2.3 Local operation history</h3>
+    <p>The app keeps a local history of recent operations on your device (up to 50 entries) as metadata: archive filename, format, size, operation date, password-used flag (yes/no). <strong>The history does not contain passwords, file contents, or archive contents.</strong> You can delete a single entry or the entire history at any time in app settings.</p>
+
+    <h3>2.4 Diagnostic data (Sentry)</h3>
+    <p>To detect crashes and improve app stability, we use <strong>Sentry</strong> (sentry.io). Sentry collects:</p>
+    <ul>
+        <li>error stack traces (crash logs);</li>
+        <li>device information (model, OS version, locale);</li>
+        <li>app version and build number.</li>
+    </ul>
+    <p>Sentry <strong>does not</strong> collect file names, archive contents, passwords or operation history. Diagnostic data is retained for up to 90 days.</p>
+
+    <h3>2.5 Advertising (AdMob)</h3>
+    <p>Archvr's free tier displays non-intrusive banner and interstitial ads after pack/unpack operations. Ads are <strong>not shown</strong> on Premium screens, during onboarding or while a file operation is in progress. Ads are served by <strong>Google AdMob</strong>, whose SDK:</p>
+    <ul>
+        <li>collects an <strong>advertising identifier</strong> (Android Advertising ID / Apple IDFA), shared with Google for ad delivery;</li>
+        <li>collects diagnostic device information (model, country-level location, language).</li>
+    </ul>
+    <p>By default we serve <strong>non-personalized</strong> ads. You can reset your advertising identifier at any time in Android or iOS settings. You can disable ads with the in-app one-time purchase „Lifetime — Remove Ads" or with the „Annual — Remove Ads" subscription.</p>
+    <p>We never sell personal data to third parties.</p>
+
+    <h3>2.6 In-app purchases (IAP)</h3>
+    <p>Payments and subscription renewals are handled exclusively by <strong>Apple App Store</strong> (iOS) or <strong>Google Play</strong> (Android). Archvr does not process or store credit card details, billing addresses or other payment specifics. The app keeps locally only the purchase status (e.g. „premium active", „subscription active until <date>").</p>
+
+    <h3>2.7 Device permissions</h3>
+    <ul>
+        <li><strong>Files / Documents</strong>: access to files you select for packing/unpacking (iOS: <code>NSDocumentsFolderUsageDescription</code>; Android: scoped storage, no separate permission).</li>
+        <li><strong>Photo library</strong> (optional): pack photos from your library (iOS: <code>NSPhotoLibraryUsageDescription</code>; Android: <code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>).</li>
+        <li><strong>App Tracking Transparency</strong> (iOS): consent prompt for ad tracking (<code>NSUserTrackingUsageDescription</code>) — you can decline; ads still work but as non-personalized.</li>
+        <li><strong>Android Advertising ID</strong>: <code>com.google.android.gms.permission.AD_ID</code>.</li>
+    </ul>
+    <p>Each permission is requested in context and you can decline it without losing access to core app functionality.</p>
+
+    <h2>3. Legal basis (GDPR)</h2>
+    <p>For users in the European Union:</p>
+    <ul>
+        <li>contract performance (Art. 6(1)(b) GDPR) — core app functionality;</li>
+        <li>legitimate interest (Art. 6(1)(f) GDPR) — Sentry diagnostics, non-personalized AdMob ads;</li>
+        <li>consent (Art. 6(1)(a) GDPR) — iOS App Tracking Transparency (you can decline; non-personalized ads are the default).</li>
+    </ul>
+
+    <h2>4. Your rights (GDPR)</h2>
+    <p>For data processed by Archvr and third parties (Sentry, Google AdMob, Apple, Google Play) you have the right to:</p>
+    <ul>
+        <li>access your data;</li>
+        <li>rectification;</li>
+        <li>erasure („right to be forgotten");</li>
+        <li>restriction of processing;</li>
+        <li>data portability;</li>
+        <li>object to processing;</li>
+        <li>withdraw consent at any time (where processing was based on consent);</li>
+        <li>lodge a complaint with your data protection authority.</li>
+    </ul>
+    <p>To exercise your rights with Archvr, contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. Sentry diagnostic data will be deleted upon your request within 30 days. Local operation history is fully under your control — delete it in app settings or uninstall the app to remove all local data.</p>
+
+    <h2>5. Children</h2>
+    <p>Archvr is not directed at children under 13. We do not knowingly collect data from children below this age. If a parent/guardian notices that a child used the app and their data was collected, please contact: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> — we will delete the data promptly.</p>
+
+    <h2>6. Third parties</h2>
+    <ul>
+        <li><strong>Google AdMob</strong> (Google LLC) — ads and advertising identifier. Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+        <li><strong>Sentry</strong> (Functional Software, Inc.) — diagnostics. Policy: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">sentry.io/privacy</a>.</li>
+        <li><strong>Apple App Store</strong> (Apple Inc.) — iOS distribution and payments. Policy: <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">apple.com/legal/privacy</a>.</li>
+        <li><strong>Google Play</strong> (Google LLC) — Android distribution and payments. Policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+    </ul>
+
+    <h2>7. Security</h2>
+    <p>Archvr uses the <strong>AES-256</strong> standard for encrypting ZIP and 7z archives with passwords. Passwords are not persisted on the device. All file operations happen locally, in the app's sandbox.</p>
+    <p>The app does not require an account, login or internet connection to perform pack, unpack or password management operations (apart from ad fetching and occasional Sentry diagnostic requests).</p>
+
+    <h2>8. Policy changes</h2>
+    <p>This policy may be updated as the app evolves. Material changes are communicated in-app and on the Apple App Store / Google Play listings. The last update date is shown at the top of this page.</p>
+
+    <h2>9. Contact</h2>
+    <p>Questions, GDPR rights requests, breach reports: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
+
+    <footer>
+        <p>© 2026 Maciej Siemiński. Archvr.</p>
+    </footer>
+</div>
+</body>
+</html>
