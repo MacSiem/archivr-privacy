@@ -58,7 +58,7 @@
 <p>对于通过 Google Play 分发的应用版本，数据控制者为 LICENCEPRO POLSKA Sp. z o.o., ul. Huculska 6, 00-730 Warszawa, Polska。</p>
 <p>本隐私政策解释了 Archivr 处理哪些个人数据、如何处理、为何处理以及您拥有哪些权利。</p>
 <h2>2. 简明摘要</h2>
-<p>Archivr 完全在您的设备上运行 — 您的文件和档案密码绝不会离开您的手机。我们集成了 Google AdMob 用于广告，Sentry 用于崩溃报告，以及 Apple / Google 计费用于应用内购买。档案密码绝不会存储在任何地方 — 它们只在活动操作期间存在于内存中。您拥有完整的 GDPR 权利，包括访问、删除和可移植性。</p>
+<p>Archivr 完全在您的设备上运行 — 您的文件和档案密码绝不会离开您的手机。我们集成了 Unity Ads 用于广告，Sentry 用于崩溃报告，以及 Apple / Google 计费用于应用内购买。档案密码绝不会存储在任何地方 — 它们只在活动操作期间存在于内存中。您拥有完整的 GDPR 权利，包括访问、删除和可移植性。</p>
 <h2>3. 我们处理的数据</h2>
 <h3>3.1 仅限本地数据</h3>
 <p>本应用在您的设备本地存储：</p>
@@ -76,13 +76,12 @@
 <li>应用版本和构建号。</li>
 </ul>
 <p>Sentry <strong>不</strong>收集您的内容（条目、文件、疫苗接种记录、照片、档案）、用户名或其他 PII。诊断数据由 Sentry 保留最长 <strong>90 天</strong>。</p>
-<h3>3.4 广告 (AdMob)</h3>
-<p>Archivr 在“主页”、“结果”和“设置”页面显示非侵入性广告（横幅），并在打包/解包操作后显示插页式广告。广告由 <strong>Google AdMob</strong> 提供，其 SDK 收集：</p>
+<h3>3.4 广告 (Unity Ads)</h3>
+<p>Archivr 在“主页”、“结果”和“设置”页面显示非侵入性广告（横幅），并在打包/解包操作后显示插页式广告。广告由 <strong>Unity Ads</strong> 提供，其 SDK 收集：</p>
 <ul>
 <li><strong>广告 ID</strong>（Android Advertising ID / Apple IDFA），与 Google 共享以投放广告；</li>
 <li>诊断数据（设备型号、国家级位置、语言）。</li>
 </ul>
-<p>Ads may also be served by AdMob mediation partners: Meta Platforms, Inc. (<a href="https://www.facebook.com/privacy/policy/">Meta Audience Network</a>) and Unity Technologies (<a href="https://unity.com/legal/privacy-policy">Unity Ads</a>).</p>
 <p>默认模式是<strong>非个性化广告</strong>。在 iOS 上，应用跟踪透明度 (ATT) 提示会在使用任何跟踪级标识符之前征求您的同意；在 Android 上，您可以在系统设置中控制广告 ID。通过终身/高级 IAP 可以永久禁用广告。</p>
 <h3>3.5 应用内购买 (IAP)</h3>
 <p>Archivr 通过 Apple 应用内购买 (iOS) 和 Google Play 计费 (Android) 提供付费功能。当您进行购买时：</p>
@@ -113,7 +112,7 @@
 <ul>
 <li><strong>在您的设备上运行应用</strong> — 本地存储和（如果存在）加密功能可让您的数据在会话之间保持不变。</li>
 <li><strong>提高稳定性</strong> — Sentry 诊断有助于修复影响您使用的崩溃问题。</li>
-<li><strong>维持免费层级</strong> — AdMob 提供非侵入性广告，以资助不购买高级版的用户。</li>
+<li><strong>维持免费层级</strong> — Unity Ads 提供非侵入性广告，以资助不购买高级版的用户。</li>
 <li><strong>处理购买</strong> — Apple / Google 计费履行您选择购买的高级版权益。</li>
 </ul>
 <h2>5. 法律依据 (GDPR Art. 6)</h2>
@@ -129,8 +128,6 @@
 <table>
 <thead><tr><th>接收方</th><th>目的</th><th>数据类别</th><th>隐私政策</th></tr></thead>
 <tbody>
-<tr><td>Google LLC (AdMob)</td><td>投放广告</td><td>广告 ID、设备和广告指标</td><td><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></td></tr>
-<tr><td>Meta Platforms, Inc. (Meta Audience Network)</td><td>投放广告</td><td>广告 ID、设备和广告指标</td><td><a href="https://www.facebook.com/privacy/policy/">https://www.facebook.com/privacy/policy/</a></td></tr>
 <tr><td>Unity Technologies (Unity Ads)</td><td>投放广告</td><td>广告 ID、设备和广告指标</td><td><a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></td></tr>
 <tr><td>Functional Software Inc. (Sentry)</td><td>崩溃报告</td><td>堆栈跟踪、设备元数据</td><td><a href="https://sentry.io/privacy/">https://sentry.io/privacy/</a></td></tr>
 <tr><td>Apple Inc. (App Store / IAP)</td><td>在 iOS 上处理应用内购买</td><td>购买令牌、账户级权益</td><td><a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></td></tr>
@@ -150,7 +147,7 @@
 <thead><tr><th>数据</th><th>存储位置</th><th>保留时长</th></tr></thead>
 <tbody>
 <tr><td>您的应用内数据</td><td>仅限您的设备</td><td>直到您删除、卸载应用或清除应用数据</td></tr>
-<tr><td>广告 ID</td><td>Google AdMob 系统</td><td>根据 Google 的保留政策（通常广告指标最长 14 个月）</td></tr>
+<tr><td>广告 ID</td><td>Unity Ads 系统</td><td>根据 Unity 的保留政策</td></tr>
 <tr><td>Sentry 崩溃数据</td><td>Sentry 系统</td><td>从事件发生起最长 90 天</td></tr>
 <tr><td>IAP 购买令牌/收据</td><td>您的设备 + Apple / Google</td><td>直到您卸载；Apple / Google 根据其自己的政策保留交易记录</td></tr>
 </tbody></table>
@@ -182,8 +179,8 @@
 </ul>
 <p>没有系统是 100% 安全的；请保持您的设备更新并使用强设备锁。</p>
 <h2>13. 应用跟踪透明度 (iOS) 和广告 ID</h2>
-<p>在 iOS 上，在 AdMob 使用任何跟踪级标识符之前，Archivr 会显示系统<strong>应用跟踪透明度</strong>提示。如果您拒绝，Archivr 将仅投放非个性化广告。</p>
-<p>在 Android 上，您可以在<strong>“设置”→“Google”→“广告”</strong>下重置或限制您的广告 ID。选择“删除广告 ID”会阻止 AdMob 使用个人标识符；非个性化广告将继续显示。</p>
+<p>在 iOS 上，在 Unity Ads 使用任何跟踪级标识符之前，Archivr 会显示系统<strong>应用跟踪透明度</strong>提示。如果您拒绝，Archivr 将仅投放非个性化广告。</p>
+<p>在 Android 上，您可以在<strong>“设置”→“Google”→“广告”</strong>下重置或限制您的广告 ID。选择“删除广告 ID”会阻止 Unity Ads 使用个人标识符；非个性化广告将继续显示。</p>
 <h2>14. 应用内购买</h2>
 <p>Archivr 通过 Apple App Store 和 Google Play 提供以下应用内产品：终身解锁、高级年度订阅、可选打赏。</p>
 <p>所有支付数据均由 <strong>Apple Inc.</strong>（App Store / iTunes 账户）或 <strong>Google LLC</strong>（Play 计费）处理。我们绝不会看到您的卡号、您的账单地址或您的完整 Apple ID / Google 账户。Apple 和 Google 仅返回一个不透明的购买令牌和权益元数据，我们用它来解锁功能。订阅可以在 iOS “设置”→“Apple ID”→“订阅”或 Google Play 应用→“订阅”中随时取消；取消规则受 Apple / Google 管辖。</p>
