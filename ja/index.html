@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Archivr</title>
+    <title>プライバシーポリシー — Archivr</title>
     <link rel="alternate" hreflang="de" href="https://macsiem.github.io/archivr-privacy/de/">
     <link rel="alternate" hreflang="en" href="https://macsiem.github.io/archivr-privacy/en/">
     <link rel="alternate" hreflang="es" href="https://macsiem.github.io/archivr-privacy/es/">
@@ -51,90 +51,56 @@
     </div>
 
 <h1>プライバシーポリシー — Archivr</h1>
-<p>最終更新日：2026-05-06 · 発効日：2026-05-06</p>
+<p>最終更新日：2026-09-13 · 発効日：2026-05-06</p>
 <h2>1. 当社について</h2>
-<p><strong>Archivr</strong> は、<strong>アーカイブの圧縮、解凍、およびパスワード保護</strong>（ZIP、7z、TAR、TAR.GZ、RAR-read）を行うモバイルアプリです。プライバシーは極めて重要です。アプリは<strong>お客様のデバイス上でローカルに実行され</strong>、お客様のファイルが<strong>当社のサーバーに送信されることは決してなく</strong>、<strong>アーカイブのパスワードがどこにも保存されることはありません</strong>—パスワードはアクティブな操作中にのみメモリ上に存在します。</p>
+
+<p>Archivr は ZIP、7z、TAR、TAR.GZ および RAR の読み取りを端末内で処理します。処理のためにファイルやアーカイブのパスワードをアップロードしません。ただし、ご自身で書き出し、共有、サポートへの送信を選択すると、データが端末外へ送られることがあります。パスワードは一時的にメモリ上で使用し、設定や操作履歴には保存しません。</p>
 <p><strong>データ管理者：</strong> Maciej Siemiński — Archivr の開発者。 <strong>連絡先：</strong> <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 <p>Google Play経由で配信されるアプリのバージョンについては、データ管理者はLICENCEPRO POLSKA Sp. z o.o., ul. Huculska 6, 00-730 Warszawa, Polskaです。</p>
 <p>このプライバシーポリシーは、Archivr がどのような個人データを、どのように、なぜ処理するのか、そしてお客様がどのような権利を持つのかを説明します。</p>
 <h2>2. 平易な言葉による概要</h2>
-<p>Archivr はお客様のデバイス上で完全に動作します — お客様のファイルとアーカイブのパスワードがお客様の携帯電話から離れることはありません。広告には Unity Ads、クラッシュレポートには Sentry、アプリ内購入には Apple / Google の決済システムを組み込んでいます。アーカイブのパスワードはどこにも保存されず、アクティブな操作中にのみメモリ上に存在します。お客様は、アクセス、削除、データポータビリティを含むすべての GDPR 権限を有します。</p>
+<p>アーカイブは端末内で処理します。Unity Ads は広告データ、Sentry は技術的な診断データ、Apple / Google は購入データを処理します。アプリ内のお知らせには Cloudflare を使用し、有効なプッシュ通知の配信には Expo と Apple / Google の通知サービスも使用します。受領者、保存期間、権利については以下をご覧ください。</p>
 <h2>3. 当社が処理するデータ</h2>
-<h3>3.1 ローカルのみのデータ</h3>
-<p>アプリはお客様のデバイスにローカルに保存します：</p>
-<ul>
-<li>ユーザー設定（テーマ、言語、デフォルト形式）、</li>
-<li>オンボーディング完了フラグ、</li>
-<li>最近の操作の短い履歴（最大50件）をメタデータとして：アーカイブファイル名、形式、サイズ、操作日時、操作にパスワードを使用したかどうか（はい/いいえ）。<strong>この履歴にはパスワードやファイルの内容は含まれていません。</strong> 設定でいつでも単一の履歴エントリまたはすべての履歴を消去できます。</li>
-</ul>
-<p>これらのデータはすべてお客様のデバイスに保存され、当社のサーバーに送信されることはありません。</p>
-<h3>3.3 診断データ (Sentry)</h3>
-<p>Archivr は、クラッシュおよびエラー報告のために Sentry (sentry.io) を統合しています。Sentry は以下を収集します：</p>
-<ul>
-<li>エラースタックトレース（クラッシュログ）、</li>
-<li>デバイス情報（モデル、OSバージョン、ロケール）、</li>
-<li>アプリのバージョンとビルド番号。</li>
-</ul>
-<p>Sentry は、お客様のコンテンツ（エントリ、ファイル、ワクチン接種記録、写真、アーカイブ）、ユーザー名、その他の PII を<strong>収集しません</strong>。診断データは Sentry によって最大<strong>90日間</strong>保持されます。</p>
-<h3>3.4 広告 (Unity Ads)</h3>
-<p>Archivr は、ホーム、結果、設定画面（バナー）に非侵襲的な広告を表示し、圧縮/解凍操作後にインタースティシャル広告を表示します。広告は<strong>Unity Ads</strong>によって配信され、その SDK は以下を収集します：</p>
-<ul>
-<li><strong>広告ID</strong>（Android Advertising ID / Apple IDFA）。Google と共有され、広告を配信するために使用されます。</li>
-<li>診断データ（デバイスモデル、国レベルのロケーション、言語）。</li>
-</ul>
-<p>デフォルトモードは<strong>パーソナライズされていない広告</strong>です。iOSでは、App Tracking Transparency (ATT) のプロンプトが、追跡目的の識別子が使用される前にお客様の同意を求めます。Androidでは、システム設定で広告IDを管理します。広告は、Lifetime / Premium IAP を介して恒久的に無効にできます。</p>
-<h3>3.5 アプリ内購入 (IAP)</h3>
-<p>Archivr は、Apple App内購入（iOS）および Google Play Billing（Android）を通じて有料機能を提供しています。お客様が購入を行う際：</p>
-<ul>
-<li>Apple / Google がすべてのカードおよびアカウントデータを処理します — <strong>お客様のカード番号、請求先住所、完全なアカウント情報を見ることはありません</strong>。</li>
-<li>Apple / Google は、Archivr が利用資格を検証するためにローカルに保存する購入トークン/取引レシートを返します。</li>
-<li>購入の復元は、Apple / Google からお客様の既存の利用資格を再取得します。</li>
-</ul>
-<p>利用可能な製品：ライフタイムアンロック、プレミアム年間サブスクリプション、任意のチップジャー。</p>
-<h3>3.6 デバイス権限</h3>
-<ul>
-<li><strong>ファイル</strong> (<code>READ_EXTERNAL_STORAGE</code> / iOSファイル)：ドキュメント/アーカイブを選択します（ファイルを選択した場合のみ）。</li>
-<li><strong>写真 / メディア</strong> (<code>READ_MEDIA_IMAGES</code> / <code>PHPhotoLibrary</code>)：ギャラリーから画像を追加または処理します（アプリのコア機能に必要でない限りオプション）。</li>
-<li><strong>通知</strong> (<code>POST_NOTIFICATIONS</code> / <code>UNUserNotificationCenter</code>)：リマインダーと操作ステータス（オプション）。</li>
-<li><strong>振動</strong> (<code>VIBRATE</code>)：触覚UIフィードバック（オプション）。</li>
-</ul>
-<p>各権限は状況に応じて要求されます。任意の権限を拒否しても、コア機能は引き続き使用できます（該当する場合）。</p>
-<h3>3.7 収集しないデータ</h3>
-<ul>
-<li>お客様の氏名、メールアドレス、電話番号、住所（アカウントは不要です）。</li>
-<li>連絡先リスト、カレンダー、SMS、通話履歴。</li>
-<li>正確な位置情報。</li>
-<li>アプリ外の閲覧履歴。</li>
-<li>生体認証データ（Face ID / Touch ID はシステムレベルのロックとしてのみ使用され、お客様のデバイスから離れることはありません）。</li>
-<li>健康、財務、または支払いカードデータ。</li>
-</ul>
+<p>端末には設定、初回案内の完了状態、Premium の種類と有効期限、最大50件の操作履歴を保存します。履歴にはファイル名、形式、サイズ、日時、パスワード使用の有無が含まれますが、パスワードやファイル内容は含まれません。履歴画面で削除でき、履歴データベースをアップロードすることはありません。言語と Premium 状態は下記のお知らせのためにも送信します。別のインストール認証情報を OS の安全なストレージに保存します。</p>
+<p>Sentry はエラーのスタックトレース、端末モデル、OS、言語、アプリのバージョンを処理します。Archivr はファイルパス、パスワード欄、自由形式の診断メッセージをフィルタリングし、アーカイブ内容を添付しません。ただし、技術メタデータには端末識別子が含まれる場合があり、匿名データではありません。保存期間は Sentry プロジェクトの設定に従います。</p>
+<p>Unity Ads は端末・SDK 識別子、許可された広告識別子、国レベルの位置、購入傾向、アプリや広告との操作、利用状況のシグナル、技術的特性を処理します。目的は広告配信と測定、分析、サービス運営、不正防止です。必要な同意がある場合、パーソナライズや測定のためにサービス間でデータが関連付けられることがあります。制限付き広告でもすべての技術処理が停止するわけではありません。Lifetime は広告を恒久的に無効にし、年額プランは権利の有効期間中に無効にします。</p>
+<p>支払いは Apple / Google が処理します。Archivr はカード情報を求めず、ストアから返された購入情報で利用権を判定します。購入の復元では利用権を再取得します。商品は Lifetime、年額プラン、任意のチップです。</p>
+<p>OS のファイル選択機能は選択したファイルやフォルダへのアクセスを許可するもので、アップロード要求ではありません。有効な通知でアプリのお知らせを届けることがあります。iOS の追跡は ATT で管理し、触覚フィードバックは無効にできます。連絡先、マイク、正確な位置へのアクセスは要求しません。</p>
+<p>サポートメールを送信すると、送信元アドレス、本文、プレビューに表示された技術情報（インストール識別子を含む）を受け取り、回答や調査に使用します。広告には使用しません。連絡先画面を開く、またはアドレスをコピーするだけでは送信されません。アカウントは不要で、電話番号、住所、連絡先一覧、カレンダー、SMS、通話履歴、アプリ外の閲覧履歴、生体情報、健康情報を要求しません。</p>
 <h2>4. このデータを処理する理由（目的）</h2>
+
 <ul>
 <li><strong>お客様のデバイスでアプリを実行するため</strong> — ローカルストレージと（存在する場合）暗号化により、セッション間でお客様のデータが保持されます。</li>
 <li><strong>安定性を向上させるため</strong> — Sentry 診断は、お客様の利用に影響を与えるクラッシュを修正するのに役立ちます。</li>
 <li><strong>無料ティアを維持するため</strong> — Unity Ads は、プレミアムを購入しないユーザーに資金を提供するために、非侵襲的な広告を配信します。</li>
 <li><strong>購入を処理するため</strong> — Apple / Google 決済は、お客様が購入を選択したプレミアムの利用資格を満たします。</li>
+<li>お知らせとサポートの提供：技術的なインストール情報を、アプリ内のお知らせ、任意のプッシュ配信、問い合わせへの回答に使用します。</li>
 </ul>
 <h2>5. 法的根拠 (GDPR Art. 6)</h2>
+
 <p>欧州経済領域、英国、スイスのユーザー向け：</p>
 <ul>
 <li><strong>契約の履行</strong> (GDPR Art. 6(1)(b)) — アプリの実行、お客様の購入の処理。</li>
-<li><strong>正当な利益</strong> (GDPR Art. 6(1)(f)) — Sentry 診断、不正/悪用防止、パーソナライズされていない広告。当社の利益は安定性の向上と無料ティアの維持であり、お客様の基本的な権利を侵害するものではありません。</li>
+<li>正当な利益（GDPR 第6条1項(f)）：安定性の診断、お知らせ、サポート、不正防止、非パーソナライズ広告。ただし法律上別途必要な同意を省略しません。信頼性の向上とサービス維持という利益は、お客様の基本的権利に優先しません。</li>
 <li><strong>同意</strong> (GDPR Art. 6(1)(a)) — パーソナライズされた広告。お客様が ATT プロンプト（iOS）またはアプリ内の設定を通じて同意を付与した場合。お客様は、事前の処理に影響を与えることなく、いつでも同意を撤回できます。</li>
 <li><strong>法的義務</strong> (GDPR Art. 6(1)(c)) — 当局からの合法的な要求に応じる必要がある場合のみ。</li>
 </ul>
 <h2>6. 受領者（データを共有する相手）</h2>
+<p>Cloudflare, Inc.（Workers / KV）は当方の委託を受け、仮名化したインストール識別子、有効な場合のプッシュトークン、プラットフォーム、バージョン、言語、配信チャネル、Premium 状態、登録・活動日時、リクエスト元 IP を処理します。リクエストには非表示にしたお知らせの識別子と、そのインストール専用の認証情報が含まれる場合がありますが、アーカイブやそのパスワードは含まれません。Expo と Apple / Google は通知トークン、内容、配信メタデータを処理します。Cloudflare は世界規模のネットワークを運営し、米国など EEA 外で処理する場合があります。EU 内限定の処理地域は設定していません。移転には Cloudflare Data Processing Addendum が適用されます。</p>
+<p><a href="https://www.cloudflare.com/policies/privacy/">Cloudflare</a> · <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Cloudflare Data Processing Addendum</a> · <a href="https://expo.dev/privacy">Expo</a></p>
+
 <p>当社は個人データを<strong>販売しません</strong>。受領者のカテゴリは、アプリの実行に厳密に必要なプロバイダーに限定されます：</p>
-<table>
+<div role="region" tabindex="0" aria-label="6. 受領者（データを共有する相手）" style="overflow-x:auto"><table>
 <thead><tr><th>受領者</th><th>目的</th><th>データカテゴリ</th><th>プライバシーポリシー</th></tr></thead>
 <tbody>
 <tr><td>Unity Technologies (Unity Ads)</td><td>Serve ads</td><td>Advertising ID, device &amp; ad metrics</td><td><a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></td></tr>
 <tr><td>Functional Software Inc. (Sentry)</td><td>Crash reporting</td><td>Stack traces, device metadata</td><td><a href="https://sentry.io/privacy/">https://sentry.io/privacy/</a></td></tr>
 <tr><td>Apple Inc. (App Store / IAP)</td><td>In-app purchase processing on iOS</td><td>Purchase token, account-level entitlement</td><td><a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></td></tr>
 <tr><td>Google LLC (Play Billing)</td><td>In-app purchase processing on Android</td><td>Purchase token, account-level entitlement</td><td><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></td></tr>
-</tbody></table>
+</tbody></table></div>
 <p>当社は、有効な裁判所命令またはその他の拘束力のある法的プロセスによって要求された場合、要求を確認し、合法な場合はお客様に通知した上でデータを開示することがあります。</p>
 <h2>7. 国際転送</h2>
+
 <p>上記の一部の受領者は欧州経済領域外（主に米国）に所在しています。転送が行われる場合、それらは以下によって保護されます：</p>
 <ul>
 <li>フレームワークに基づいて認定されたプロバイダー（Google LLCを含む）に対する<strong>欧州委員会の十分性認定</strong> (EU-US Data Privacy Framework)。</li>
@@ -143,50 +109,45 @@
 </ul>
 <p>関連する保護措置のコピーは、<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> までご連絡いただくことで請求できます。</p>
 <h2>8. 保持期間</h2>
-<table>
-<thead><tr><th>データ</th><th>所在地</th><th>期間</th></tr></thead>
-<tbody>
-<tr><td>アプリ内のデータ</td><td>お客様のデバイスのみ</td><td>お客様が削除するか、アプリをアンインストールするか、アプリデータを消去するまで</td></tr>
-<tr><td>Advertising ID</td><td>Unity Ads systems</td><td>Unity の保持ポリシーに従う</td></tr>
-<tr><td>Sentry crash data</td><td>Sentry systems</td><td>イベントから最大90日間</td></tr>
-<tr><td>IAP purchase token / receipt</td><td>お客様のデバイス + Apple / Google</td><td>アンインストールまで。Apple / Google はそれぞれのポリシーに従って取引記録を保持します</td></tr>
-</tbody></table>
+<p>設定と履歴は削除またはアプリデータの消去まで端末に残ります。書き出したファイルは選択した保存先に残ります。インストール認証情報は安全なストレージから削除されるまで保持され、iOS ではアプリのアンインストール後も残る場合があります。</p>
+<p>Unity のデータは同社の方針に従って保存されます。Sentry のイベントはプロジェクト設定に従って保存後に削除されます。ご自身の報告の保存期間はお問い合わせください。Cloudflare の登録・活動記録は登録解除または削除依頼の対応まで保持し、現在、自動有効期限は設定していません。</p>
+<p>サポートのやり取りは問い合わせ解決、必要な追加対応、法的義務のために保持します。端末内の購入権利は購入確認時に更新され、アプリデータとともに削除されます。Apple / Google は取引記録を各社の方針に従って保持します。</p>
 <h2>9. お客様の権利 (GDPR Art. 15–22)</h2>
+
 <p>お客様は、ご自身の個人データに関して以下の権利を有します：</p>
 <ul>
 <li><strong>アクセス権 (GDPR Art. 15)</strong> — 当社がお客様のデータを処理しているかどうかの確認と、そのコピーの取得。ほとんどのデータは既にお客様のデバイス上にあります。アプリからエクスポートするか、残りのデータについては当社にご連絡ください。</li>
 <li><strong>訂正権 (GDPR Art. 16)</strong> — 不正確なデータを訂正する。アプリ内でデータを直接編集してください。</li>
-<li><strong>消去権 /「忘れられる権利」 (GDPR Art. 17)</strong> — 設定 → 「すべてのデータを消去」またはアプリのアンインストールにより、すべてのデータを削除する。</li>
+<li>消去権（GDPR 第17条）：履歴画面で履歴を、OS のファイル管理機能でファイルを削除できます。当方やサービス提供者のデータについてはご連絡ください。アンインストールだけでは書き出したファイルや遠隔の記録は削除されません。</li>
 <li><strong>処理の制限権 (GDPR Art. 18)</strong> — 一時的な処理停止を要求する。当社にご連絡ください。</li>
-<li><strong>データポータビリティ権 (GDPR Art. 20)</strong> — 設定 → 「データをエクスポート」により JSON / Markdown バンドルが生成されます。</li>
+<li>データポータビリティ権（GDPR 第20条）：適用される場合、当方が保有する個人データのコピーをご請求ください。アーカイブは OS のファイル選択機能で保存・共有できます。</li>
 <li><strong>異議を唱える権利 (GDPR Art. 21)</strong> — 正当な利益に基づく処理、特にプロファイリング型の広告に異議を唱える。アプリ設定またはシステム制御を通じてパーソナライズされた広告を無効にしてください。</li>
 <li><strong>自動化された意思決定の対象とならない権利 (GDPR Art. 22)</strong> — Archivr は、お客様に対して法的または同様に重大な影響を及ぼす自動化された意思決定を行いません。</li>
 </ul>
-<p>いずれかの権利を行使するには、<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> までご連絡ください。30日以内に返答いたします（複雑な要求の場合は、通知の上、60日間延長されることがあります）。</p>
+<p>権利行使は mail@macsiem.dev へご連絡ください。1か月以内に回答します。複雑さや件数によりさらに2か月延長する場合は、最初の1か月以内に理由をお知らせします。</p>
 <h2>10. 苦情を申し立てる権利 (GDPR Art. 77)</h2>
+
 <p>お客様は、当社がお客様のデータを不法に処理していると信じる場合、監督機関に苦情を申し立てることができます。ポーランド居住者の場合：</p>
-<p><strong>Prezes Urzędu Ochrony Danych Osobowych (PUODO)</strong> ul. Stawki 2, 00-193 Warszawa, Poland <a href="https://uodo.gov.pl">https://uodo.gov.pl</a></p>
+<p><strong>Prezes Urzędu Ochrony Danych Osobowych (PUODO)</strong> ul. Stanisława Moniuszki 1A, 00-014 Warszawa, Poland <a href="https://uodo.gov.pl">https://uodo.gov.pl</a></p>
 <p>お客様は、居住地、勤務地、または違反があったとされる他のEEA国の監督機関にも苦情を申し立てることができます。</p>
 <h2>11. 子供のプライバシー</h2>
-<p>Archivr は<strong>13歳未満の子供を対象としていません</strong>（現地法で適用される場合は16歳未満）。当社は、この年齢未満の子供から意図的に個人データを収集することはありません。子供が保護者の同意なしに当社に個人データを提供したと思われる場合は、<a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> までご連絡ください。速やかに削除いたします。</p>
-<p>Archivr には「家族向け」/「5歳以上」の Apple / Google フラグは<strong>設定されていません</strong> — このアプリは13歳以上の一般向けと評価されています。</p>
+<p>Archivr は一般向けのユーティリティで、子ども向けに特化して設計されていません。法律上必要な同意なしに子どものデータが処理されたと思われる場合は mail@macsiem.dev へご連絡ください。調査し、必要な削除などの措置を取ります。</p>
 <h2>12. セキュリティ</h2>
-<ul>
-<li><strong>ローカルのみの操作</strong> — 圧縮、解凍、パスワード追加、パスワード削除の操作は、完全にデバイスのメモリ内で実行されます。</li>
-<li><strong>パスワードの永続化なし</strong> — アーカイブのパスワードは<strong>アクティブな操作の期間中のみ</strong>メモリに保持され、操作後すぐにクリアされます。SecureStore、MMKV、履歴、またはログに書き込まれることはありません。</li>
-<li><strong>転送セキュリティ</strong> — すべてのネットワーク呼び出し（広告、IAP、オプションの Sentry 診断）は HTTPS / TLS 1.2+ を使用します。</li>
-<li><strong>最小化</strong> — 当社は、記載された目的に必要なデータのみを収集します。</li>
-</ul>
-<p>いかなるシステムも100%安全ではありません。デバイスを常に最新の状態に保ち、強力なデバイスロックを使用してください。</p>
+<p>アーカイブ操作はメモリと一時ファイルまたは出力ファイルを使い、端末内で実行します。パスワードは入力・処理時に一時的に使用し、設定、安全なストレージ、履歴には保存せず、診断からパスワード欄を除外します。広告、購入、診断、Cloudflare のお知らせ通信には HTTPS を使用します。データを記載した目的に必要な範囲に限定します。完全に安全なシステムはないため、端末を更新し、安全なロックを使用してください。</p>
 <h2>13. App Tracking Transparency (iOS) および広告ID</h2>
+
 <p>iOS では、Unity Ads が追跡目的の識別子を使用する前に、Archivr はシステムの <strong>App Tracking Transparency</strong> プロンプトを表示します。お客様が拒否した場合、Archivr はパーソナライズされていない広告のみを配信します。</p>
-<p>Android では、<strong>設定 → Google → 広告</strong> で広告IDをリセットまたは制限できます。「広告IDを削除」を選択すると、Unity Ads が個人識別子を使用するのを停止します。パーソナライズされていない広告は引き続き表示されます。</p>
+<p>Android では設定 → Google → 広告で広告 ID をリセットまたは削除できます。削除で消えるのはその広告識別子であり、すべての SDK 識別子や技術的処理が停止するわけではありません。制限付き広告が表示されることがあります。</p>
+
 <h2>14. アプリ内購入</h2>
+
 <p>Archivr は、Apple App Store および Google Play を通じて、ライフタイムアンロック、プレミアム年間サブスクリプション、オプションのチップジャーなどのアプリ内製品を提供しています。</p>
-<p>すべての支払いデータは、<strong>Apple Inc.</strong> (App Store / iTunes アカウント) または <strong>Google LLC</strong> (Play Billing) によって処理されます。お客様のカード番号、請求先住所、または完全な Apple ID / Google アカウントを見ることは決してありません。Apple と Google は、機能のロック解除に使用する不透明な購入トークンと利用資格のメタデータのみを返します。サブスクリプションは、iOS の「設定」→「Apple ID」→「サブスクリプション」または Google Play アプリの「サブスクリプション」でいつでもキャンセルできます。キャンセルルールは Apple / Google によって管理されます。</p>
+<p>支払いとアカウント情報は Apple / Google が処理します。Archivr はカード情報を要求せず、返された購入・利用権情報を使い、状態と期限を端末に保存します。解約は iOS の設定 → Apple ID → サブスクリプション、または Google Play → 定期購入で行えます。各ストアの解約規則が適用されます。</p>
+
 <h2>15. 本ポリシーの変更</h2>
-<p>当社は、アプリ、サードパーティ SDK、または適用される法律の変更に伴い、本ポリシーを更新することがあります。重要な変更はアプリ内で告知され、上部の「最終更新日」が変更されます。変更後も Archivr を継続して使用することは、更新されたポリシーへの同意を意味します。</p>
+<p>アプリ、サービス、法令の変更に伴い本方針を更新する場合があります。更新日で改訂を示し、必要な追加通知を行います。変更に同意が必要な場合は、別途同意を求めます。</p>
 <h2>16. お問い合わせ</h2>
+
 <p>プライバシーに関するご質問、権利の行使、または本ポリシーに関する懸念事項については、以下にご連絡ください：</p>
 <p><strong>Maciej Siemiński</strong> Email: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 <p>本ポリシーの正規版：<a href="https://macsiem.github.io/archivr-privacy/">https://macsiem.github.io/archivr-privacy/</a> ソース：<a href="https://github.com/MacSiem/archivr-privacy">https://github.com/MacSiem/archivr-privacy</a></p>
