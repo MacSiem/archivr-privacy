@@ -30,6 +30,8 @@
         a:hover { color: #1e3a8a; border-bottom-color: #1e3a8a; }
         strong { color: #1e3a8a; }
         code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 0.9em; }
+        .table-scroll { overflow-x: auto; margin: 14px 0; }
+        .table-scroll:focus-visible { outline: 2px solid #1e40af; outline-offset: 2px; }
         table { border-collapse: collapse; width: 100%; margin: 14px 0; font-size: 0.95em; }
         th, td { border: 1px solid #e5e7eb; padding: 8px 12px; vertical-align: top; }
         th { background: #f9fafb; text-align: left; color: #1e3a8a; }
@@ -51,88 +53,91 @@
     </div>
 
 <h1>Privacy Policy — Archivr</h1>
-<p>Last updated: 2026-08-12 · Effective date: 2026-05-06</p>
+<p>Last updated: 2026-09-13 · Effective date: 2026-05-06</p>
 <h2>1. Who we are</h2>
-<p><strong>Archivr</strong> is a mobile app for <strong>packing, unpacking, and password-protecting archives</strong> (ZIP, 7z, TAR, TAR.GZ, RAR-read). Privacy is fundamental: the app runs <strong>locally on your device</strong>, your files <strong>never leave your phone for our servers</strong>, and <strong>archive passwords are never stored anywhere</strong> — they exist in memory only during the active operation.</p>
+<p><strong>Archivr</strong> is a mobile app for <strong>packing, unpacking, and password-protecting archives</strong> (ZIP, 7z, TAR, TAR.GZ, RAR-read). Archive processing runs <strong>locally on your device</strong>; Archivr does not upload files or archive passwords to process them. Files or support information may leave your device when you choose to export, share or send them. Archive passwords are used in transient memory and are not saved in app preferences or operation history.</p>
 <p><strong>Data controller:</strong> Maciej Siemiński — the developer of Archivr. <strong>Contact:</strong> <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
 <p>For the version of the app distributed via Google Play, the data controller is LICENCEPRO POLSKA Sp. z o.o., ul. Huculska 6, 00-730 Warszawa, Polska.</p>
 <p>This Privacy Policy explains what personal data Archivr processes, how, why, and what rights you have.</p>
 <h2>2. Plain-language summary</h2>
-<p>Archivr runs entirely on your device — your files and archive passwords never leave your phone. We integrate Unity Ads for ads, Sentry for crash reporting, and Apple / Google billing for in-app purchases. Archive passwords are never stored anywhere — they exist in memory only during the active operation. You have full GDPR rights including access, deletion, and portability.</p>
+<p>Archive processing runs on your device. Archivr does not upload your files or archive passwords for processing; you control any export or sharing through the system picker. We use Unity Ads for advertising, Sentry for crash reporting, Apple / Google billing for purchases, and Cloudflare for app announcements. Push delivery also uses Expo and Apple / Google notification services. Archive passwords are not saved in app preferences or operation history. Your data-protection rights, including access, deletion and portability where applicable, are described below.</p>
 <h2>3. Data we process</h2>
-<h3>3.1 Local-only data</h3>
+<h3>3.1 Data stored on your device</h3>
 <p>The app stores locally on your device:</p>
 <ul>
 <li>user preferences (theme, language, default formats),</li>
 <li>onboarding completion flag,</li>
-<li>a short history of recent operations (up to 50 entries) as metadata: archive file name, format, size, operation date, whether the operation used a password (yes/no). <strong>The history contains no passwords and no file content.</strong> You can erase a single history entry or the entire history at any time in Settings.</li>
+<li>a short history of recent operations (up to 50 entries) as metadata: archive file name, format, size, operation date, whether the operation used a password (yes/no). <strong>The history contains no passwords and no file content.</strong> You can erase entries in the History screen.</li>
 </ul>
-<p>These data are stored entirely on your device and are never transmitted to our servers.</p>
-<h3>3.3 Diagnostic data (Sentry)</h3>
+<p>The operation-history database is not uploaded. Some technical attributes, such as language and Premium status, are also transmitted for the purposes described below. The app also stores purchase entitlement status locally and an installation credential in the operating system's secure storage to authorize announcement requests. This credential is separate from archive passwords.</p>
+<h3>3.2 Diagnostic data (Sentry)</h3>
 <p>Archivr integrates Sentry (sentry.io) for crash and error reporting. Sentry collects:</p>
 <ul>
 <li>error stack traces (crash logs),</li>
 <li>device info (model, OS version, locale),</li>
 <li>app version and build number.</li>
 </ul>
-<p>Sentry <strong>does not</strong> collect your content (entries, files, vaccination records, photos, archives), usernames, or other PII. Diagnostic data is retained by Sentry for up to <strong>90 days</strong>.</p>
-<h3>3.4 Advertising (Unity Ads)</h3>
+<p>Archivr filters file paths, archive-password fields and free-form diagnostic messages in its reporting pipeline, and does not attach archive contents. Sentry still processes technical device and crash metadata, which may include a device identifier. These safeguards do not make diagnostic data anonymous. Diagnostic events are kept according to the Sentry project retention settings, then removed by the service. Contact us about the retention applicable to your report.</p>
+<h3>3.3 Advertising (Unity Ads)</h3>
 <p>Archivr shows non-invasive ads on Home, Result and Settings (banner) plus interstitial after pack/unpack operations. Ads are delivered by <strong>Unity Ads</strong>, whose SDK collects:</p>
 <ul>
-<li>the <strong>Advertising ID</strong> (Android Advertising ID / Apple IDFA), shared with Unity Ads to serve ads;</li>
-<li>diagnostic data (device model, country-level location, language).</li>
+<li>device and SDK user identifiers, including the advertising identifier where permitted;</li>
+<li>country-level location, purchase tendencies, app and ad interactions, and usage signals;</li>
+<li>SDK performance and device properties such as language, model and connection type.</li>
 </ul>
-<p>Default mode is <strong>non-personalized ads</strong>. On iOS, the App Tracking Transparency (ATT) prompt asks for your consent before any tracking-grade identifier is used; on Android you control the Advertising ID under system Settings. Ads can be permanently disabled via the Lifetime / Premium IAP.</p>
-<h3>3.5 In-app purchases (IAP)</h3>
+<p>Unity uses these data to deliver and measure advertising, perform analytics, operate its service and prevent abuse. With the required consent, advertising data can be linked across apps and services for personalization and measurement. See <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity's app-user privacy policy</a>. Choosing limited ads does not mean the SDK stops all technical data processing.</p>
+<p>Default mode is <strong>non-personalized ads</strong>. On iOS, the App Tracking Transparency (ATT) prompt asks for your consent before any tracking-grade identifier is used; on Android you control the Advertising ID under system Settings. Lifetime disables ads permanently; an annual Premium subscription disables them while the entitlement is active.</p>
+<h3>3.4 In-app purchases (IAP)</h3>
 <p>Archivr offers paid features through Apple In-App Purchase (iOS) and Google Play Billing (Android). When you make a purchase:</p>
 <ul>
-<li>Apple / Google process all card and account data — <strong>we never see your card number, billing address, or full account information</strong>;</li>
-<li>Apple / Google return a purchase token / transaction receipt that Archivr stores locally to validate entitlement;</li>
+<li>Apple / Google process payment and account information; <strong>Archivr does not ask you to enter card details</strong>;</li>
+<li>the app uses purchase information returned by Apple / Google to determine entitlement and stores the entitlement tier and expiry date locally;</li>
 <li>restore purchases re-fetches your existing entitlements from Apple / Google.</li>
 </ul>
 <p>Available products: lifetime unlock, premium annual subscription, optional tip jar.</p>
-<h3>3.6 Device permissions</h3>
+<h3>3.5 System permissions and pickers</h3>
+<p>You select archive inputs and export destinations through system file pickers. A picker grants access to the selected files or directory; it is not a request to upload your files. If notifications are enabled, they can deliver app announcements. On iOS, ATT controls tracking permission for advertising. Haptic feedback can be switched off in Settings. Archivr does not request access to your contacts, microphone or precise location.</p>
+<h3>3.6 Contact support</h3><p>If you choose to send a support email, we receive your sender address, message and the technical details shown in the preview, including the installation identifier. We use them to respond and diagnose your report, not for advertising. Opening the contact screen or copying the address does not send an email.</p>
+<h3>3.7 Data outside our collection</h3>
 <ul>
-<li><strong>Files</strong> (<code>READ_EXTERNAL_STORAGE</code> / iOS Files): pick documents/archives (only when you choose a file).</li>
-<li><strong>Photos / Media</strong> (<code>READ_MEDIA_IMAGES</code> / <code>PHPhotoLibrary</code>): add or process images from the gallery (optional unless required for app's core function).</li>
-<li><strong>Notifications</strong> (<code>POST_NOTIFICATIONS</code> / <code>UNUserNotificationCenter</code>): reminders and operation status (optional).</li>
-<li><strong>Vibrate</strong> (<code>VIBRATE</code>): haptic UI feedback (optional).</li>
-</ul>
-<p>Each permission is requested contextually. You can deny any permission and still use the core features (where applicable).</p>
-<h3>3.7 What we do NOT collect</h3>
-<ul>
-<li>Your name, email, phone number, address (no account is required).</li>
+<li>No user account or sign-in is required. We do not request a telephone number or postal address.</li>
 <li>Contacts list, calendar, SMS, call logs.</li>
 <li>Precise location.</li>
 <li>Browsing history outside the app.</li>
-<li>Biometric data (Face ID / Touch ID is used only as a system-level lock and never leaves your device).</li>
-<li>Health, financial, or payment card data.</li>
+<li>Biometric data.</li>
+<li>Health data and payment card details. Purchase entitlements and the advertising data described above are separate.</li>
 </ul>
 <h2>4. Why we process this data (purposes)</h2>
 <ul>
 <li><strong>Run the app on your device</strong> — local storage and (where present) encryption let your data persist between sessions.</li>
 <li><strong>Improve stability</strong> — Sentry diagnostics help fix crashes that affect your usage.</li>
 <li><strong>Sustain the free tier</strong> — Unity Ads delivers non-invasive ads to fund users who do not buy premium.</li>
+<li><strong>Provide announcements and support</strong> — technical installation data enable app notices, optional push delivery and responses to support requests.</li>
 <li><strong>Process purchases</strong> — Apple / Google billing fulfils premium entitlements you choose to buy.</li>
 </ul>
 <h2>5. Legal basis (GDPR Article 6)</h2>
 <p>For users in the European Economic Area, United Kingdom, and Switzerland:</p>
 <ul>
 <li><strong>Performance of a contract</strong> (Art. 6(1)(b)) — running the app, processing your purchases.</li>
-<li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — Sentry diagnostics, fraud / abuse prevention, non-personalized advertising. Our interest is improving stability and sustaining the free tier; this does not override your fundamental rights.</li>
+<li><strong>Legitimate interest</strong> (Art. 6(1)(f)) — Sentry diagnostics, app announcements, support, fraud / abuse prevention and non-personalized advertising, subject to any separate consent required by law. Our interest is improving stability and sustaining the free tier; this does not override your fundamental rights.</li>
 <li><strong>Consent</strong> (Art. 6(1)(a)) — personalized advertising, where you grant consent via the ATT prompt (iOS) or in-app preference. You may withdraw consent at any time without affecting prior processing.</li>
 <li><strong>Legal obligation</strong> (Art. 6(1)(c)) — only when we must respond to a lawful request from authorities.</li>
 </ul>
 <h2>6. Recipients (with whom we share data)</h2>
 <p>We do <strong>not sell</strong> personal data. The categories of recipients are limited to providers strictly required to run the app:</p>
+<div class="table-scroll" role="region" aria-label="Data recipients" tabindex="0">
 <table>
 <thead><tr><th>Recipient</th><th>Purpose</th><th>Data category</th><th>Privacy policy</th></tr></thead>
 <tbody>
+<tr><td>Cloudflare, Inc. (Workers / KV)</td><td>Host in-app announcements, device registration and notification delivery; prevent abuse</td><td>Pseudonymous installation ID, push token when notifications are enabled, platform, app version, language, release channel, Premium flag, registration/activity timestamps and request IP address. Archive files and archive passwords are not sent.</td><td><a href="https://www.cloudflare.com/policies/privacy/">Cloudflare privacy policy</a></td></tr>
+<tr><td>Expo; Apple / Google notification services</td><td>Deliver push notifications when enabled</td><td>Push token, notification content and delivery metadata</td><td><a href="https://expo.dev/privacy">Expo privacy policy</a>; Apple and Google policies below</td></tr>
 <tr><td>Unity Technologies (Unity Ads)</td><td>Serve ads</td><td>Advertising ID, device &amp; ad metrics</td><td><a href="https://unity.com/legal/privacy-policy">https://unity.com/legal/privacy-policy</a></td></tr>
 <tr><td>Functional Software Inc. (Sentry)</td><td>Crash reporting</td><td>Stack traces, device metadata</td><td><a href="https://sentry.io/privacy/">https://sentry.io/privacy/</a></td></tr>
 <tr><td>Apple Inc. (App Store / IAP)</td><td>In-app purchase processing on iOS</td><td>Purchase token, account-level entitlement</td><td><a href="https://www.apple.com/legal/privacy/">https://www.apple.com/legal/privacy/</a></td></tr>
 <tr><td>Google LLC (Play Billing)</td><td>In-app purchase processing on Android</td><td>Purchase token, account-level entitlement</td><td><a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></td></tr>
 </tbody></table>
+</div>
+<p>Cloudflare processes these technical data on our behalf to provide app announcements and push notifications. Requests may also contain dismissed announcement identifiers and an installation credential used only to authorize that installation. Cloudflare operates a global network; processing may take place outside the EEA, including in the United States. International transfers are governed by the <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Cloudflare Data Processing Addendum</a>. We have not configured an EU-only processing region. Push delivery also uses Expo and the operating system notification service.</p>
 <p>We may disclose data if required by a valid court order or other binding legal process, after verifying the request and notifying you where lawful.</p>
 <h2>7. International transfers</h2>
 <p>Some of the recipients above are located outside the European Economic Area (mainly in the United States). Where transfers occur, they are protected by:</p>
@@ -143,49 +148,53 @@
 </ul>
 <p>You can request a copy of the relevant safeguards by writing to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
 <h2>8. Retention</h2>
+<div class="table-scroll" role="region" aria-label="Data retention" tabindex="0">
 <table>
 <thead><tr><th>Data</th><th>Where it lives</th><th>How long</th></tr></thead>
 <tbody>
-<tr><td>Your in-app data</td><td>Your device only</td><td>Until you delete it, uninstall the app, or wipe app data</td></tr>
+<tr><td>Preferences and operation history</td><td>Your device</td><td>Until deleted or app data is removed; exported files remain at the destinations you choose</td></tr>
+<tr><td>Installation credential</td><td>Operating system secure storage</td><td>Until removed from secure storage; on iOS it may survive app uninstallation</td></tr>
 <tr><td>Advertising ID</td><td>Unity Ads systems</td><td>Per Unity's retention policy</td></tr>
-<tr><td>Sentry crash data</td><td>Sentry systems</td><td>Up to 90 days from the event</td></tr>
-<tr><td>IAP purchase token / receipt</td><td>Your device + Apple / Google</td><td>Until you uninstall; Apple / Google keep transaction records per their own policies</td></tr>
+<tr><td>Sentry crash data</td><td>Sentry systems</td><td>According to the Sentry project retention settings; not retained indefinitely</td></tr>
+<tr><td>Announcement registration and activity</td><td>Cloudflare Workers / KV</td><td>Until unregistering or fulfilling a deletion request; no automatic expiry is currently configured</td></tr>
+<tr><td>Support correspondence</td><td>Support mailbox</td><td>For resolving the request and, where necessary, handling follow-up or legal obligations</td></tr>
+<tr><td>Purchase entitlement and transaction information</td><td>Entitlement status on your device; transaction records at Apple / Google</td><td>Local status is updated when purchases are checked and removed with app data; Apple / Google retain transaction records under their policies</td></tr>
 </tbody></table>
+</div>
 <h2>9. Your rights (GDPR Art. 15–22)</h2>
 <p>You have the following rights regarding your personal data:</p>
 <ul>
 <li><strong>Right of access (Art. 15)</strong> — confirmation whether we process your data and a copy of it. Most of your data is already on your device; export from the app or write to us for the rest.</li>
 <li><strong>Right to rectification (Art. 16)</strong> — correct inaccurate data. Edit data directly in the app.</li>
-<li><strong>Right to erasure / "right to be forgotten" (Art. 17)</strong> — delete all data via Settings → "Erase all data", or by uninstalling the app.</li>
+<li><strong>Right to erasure / "right to be forgotten" (Art. 17)</strong> — clear operation history in the History screen, remove files through the system file manager, and contact us to request deletion of data held by us or our providers. Uninstalling does not delete files you exported or remote records.</li>
 <li><strong>Right to restrict processing (Art. 18)</strong> — request a temporary halt; write to us.</li>
-<li><strong>Right to data portability (Art. 20)</strong> — Settings → "Export data" produces a JSON / Markdown bundle.</li>
+<li><strong>Right to data portability (Art. 20)</strong> — contact us to request a copy of personal data we hold, where the right applies. Archive files can be saved or shared through the system file picker.</li>
 <li><strong>Right to object (Art. 21)</strong> — object to processing based on legitimate interest, especially profiling-style ads. Disable personalized ads in app settings or via system controls.</li>
 <li><strong>Right not to be subject to automated decisions (Art. 22)</strong> — Archivr does not make automated decisions with legal or similarly significant effect about you.</li>
 </ul>
-<p>To exercise any right, write to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. We respond within 30 days (extendable by 60 days for complex requests, with notice).</p>
+<p>To exercise any right, write to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>. We respond within one month. Where the complexity or number of requests requires it, this may be extended by two further months; we will explain the extension within the first month.</p>
 <h2>10. Right to lodge a complaint (GDPR Art. 77)</h2>
 <p>If you believe we are processing your data unlawfully, you may file a complaint with a supervisory authority. For Polish residents:</p>
-<p><strong>Prezes Urzędu Ochrony Danych Osobowych (PUODO)</strong> ul. Stawki 2, 00-193 Warszawa, Poland <a href="https://uodo.gov.pl">https://uodo.gov.pl</a></p>
+<p><strong>Prezes Urzędu Ochrony Danych Osobowych (PUODO)</strong> ul. Stanisława Moniuszki 1A, 00-014 Warszawa, Poland <a href="https://uodo.gov.pl">https://uodo.gov.pl</a></p>
 <p>You may also file a complaint with the supervisory authority of your habitual residence, place of work, or place of the alleged infringement in another EEA country.</p>
 <h2>11. Children's privacy</h2>
-<p>Archivr is <strong>not directed at children under 13</strong> (under 16 where applicable per local law). We do not knowingly collect personal data from children under that age. If you believe a child has provided us personal data without parental consent, contact us at <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> and we will delete it promptly.</p>
-<p>The "Designed for Families" / "Ages 5+" Apple / Google flags are <strong>not</strong> set on Archivr — the app is rated for general audiences 13+.</p>
+<p>Archivr is a general-purpose utility and is not designed specifically for children. If you believe a child's personal data has been processed without consent required by applicable law, contact <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a> so we can investigate and take appropriate action, including deletion where required.</p>
 <h2>12. Security</h2>
 <ul>
-<li><strong>Local-only operations</strong> — pack, unpack, add password, and remove password operations execute entirely in device memory.</li>
-<li><strong>Passwords never persisted</strong> — archive passwords are kept in memory <strong>only for the duration of the active operation</strong> and are cleared immediately afterwards. They are never written to SecureStore, MMKV, history, or any log.</li>
-<li><strong>Transport security</strong> — all network calls (ads, IAP, optional Sentry diagnostics) use HTTPS / TLS 1.2+.</li>
+<li><strong>Local-only operations</strong> — pack, unpack, add password and remove password operations run on the device, using memory and temporary or output files.</li>
+<li><strong>Archive passwords</strong> — passwords are used in transient memory while you enter them and perform an operation. Archivr does not save them in preferences, secure storage or operation history, and filters password fields from diagnostic reports.</li>
+<li><strong>Transport security</strong> — app network communications for ads, purchases, Sentry diagnostics and Cloudflare announcements use HTTPS.</li>
 <li><strong>Minimization</strong> — we collect only what is required for the listed purposes.</li>
 </ul>
 <p>No system is 100% secure; please keep your device updated and use strong device locks.</p>
 <h2>13. App Tracking Transparency (iOS) and Advertising ID</h2>
 <p>On iOS, before any tracking-grade identifier is used by Unity Ads, Archivr shows the system <strong>App Tracking Transparency</strong> prompt. If you decline, Archivr serves only non-personalized ads.</p>
-<p>On Android, you can reset or limit your Advertising ID under <strong>Settings → Google → Ads</strong>. Choosing "Delete advertising ID" stops Unity Ads from using a personal identifier; non-personalized ads continue to be shown.</p>
+<p>On Android, you can reset or limit your Advertising ID under <strong>Settings → Google → Ads</strong>. Choosing "Delete advertising ID" removes that advertising identifier. It does not stop all SDK identifiers or technical data processing; limited ads may still be shown.</p>
 <h2>14. In-app purchases</h2>
 <p>Archivr offers the following in-app products through Apple App Store and Google Play: lifetime unlock, premium annual subscription, optional tip jar.</p>
-<p>All payment data is handled by <strong>Apple Inc.</strong> (App Store / iTunes account) or <strong>Google LLC</strong> (Play Billing). We never see your card number, your billing address, or your full Apple ID / Google account. Apple and Google return only an opaque purchase token and entitlement metadata that we use to unlock features. Subscriptions can be cancelled at any time in iOS Settings → Apple ID → Subscriptions or in the Google Play app → Subscriptions; cancellation rules are governed by Apple / Google.</p>
+<p>All payment data is handled by <strong>Apple Inc.</strong> (App Store / iTunes account) or <strong>Google LLC</strong> (Play Billing). Archivr does not ask for card details. It uses purchase and entitlement information returned by the store to unlock features, and saves entitlement status and expiry locally. Subscriptions can be cancelled at any time in iOS Settings → Apple ID → Subscriptions or in the Google Play app → Subscriptions; cancellation rules are governed by Apple / Google.</p>
 <h2>15. Changes to this policy</h2>
-<p>We may update this policy as the app, third-party SDKs, or applicable law change. Material changes will be announced in-app and the "Last updated" date at the top will change. Continuing to use Archivr after a change constitutes acceptance of the updated policy.</p>
+<p>We may update this policy as the app, third-party SDKs, or applicable law change. The "Last updated" date will identify revisions, and we will provide additional notice where required. If a change requires your consent, we will request it separately.</p>
 <h2>16. Contact</h2>
 <p>For privacy questions, exercise of rights, or concerns about this policy:</p>
 <p><strong>Maciej Siemiński</strong> Email: <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
