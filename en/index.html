@@ -53,7 +53,7 @@
     </div>
 
 <h1>Privacy Policy — Archivr</h1>
-<p>Last updated: 2026-09-13 · Effective date: 2026-05-06</p>
+<p>Last updated: 2026-10-09 · Effective date: 2026-05-06</p>
 <h2>1. Who we are</h2>
 <p><strong>Archivr</strong> is a mobile app for <strong>packing, unpacking, and password-protecting archives</strong> (ZIP, 7z, TAR, TAR.GZ, RAR-read). Archive processing runs <strong>locally on your device</strong>; Archivr does not upload files or archive passwords to process them. Files or support information may leave your device when you choose to export, share or send them. Archive passwords are used in transient memory and are not saved in app preferences or operation history.</p>
 <p><strong>Data controller:</strong> Maciej Siemiński — the developer of Archivr. <strong>Contact:</strong> <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
@@ -107,6 +107,7 @@
 <li>Biometric data.</li>
 <li>Health data and payment card details. Purchase entitlements and the advertising data described above are separate.</li>
 </ul>
+<p><strong>Version inventory.</strong> To assess support for older app versions, Cloudflare stores a separate version inventory: a pseudonymous installation identifier, platform, app version, build, release channel and first/last activity times. This does not require a push token or notification permission and does not include archive files, passwords, language or Premium status.</p>
 <h2>4. Why we process this data (purposes)</h2>
 <ul>
 <li><strong>Run the app on your device</strong> — local storage and (where present) encryption let your data persist between sessions.</li>
@@ -148,6 +149,7 @@
 </ul>
 <p>You can request a copy of the relevant safeguards by writing to <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a>.</p>
 <h2>8. Retention</h2>
+<p><strong>Version inventory.</strong> Version inventory records expire automatically 120 days after the last successful report.</p>
 <div class="table-scroll" role="region" aria-label="Data retention" tabindex="0">
 <table>
 <thead><tr><th>Data</th><th>Where it lives</th><th>How long</th></tr></thead>
@@ -156,7 +158,7 @@
 <tr><td>Installation credential</td><td>Operating system secure storage</td><td>Until removed from secure storage; on iOS it may survive app uninstallation</td></tr>
 <tr><td>Advertising ID</td><td>Unity Ads systems</td><td>Per Unity's retention policy</td></tr>
 <tr><td>Sentry crash data</td><td>Sentry systems</td><td>According to the Sentry project retention settings; not retained indefinitely</td></tr>
-<tr><td>Announcement registration and activity</td><td>Cloudflare Workers / KV</td><td>Until unregistering or fulfilling a deletion request; no automatic expiry is currently configured</td></tr>
+<tr><td>Push notification registration and activity</td><td>Cloudflare Workers / KV</td><td>Until unregistering or fulfilling a deletion request; no automatic expiry is currently configured</td></tr>
 <tr><td>Support correspondence</td><td>Support mailbox</td><td>For resolving the request and, where necessary, handling follow-up or legal obligations</td></tr>
 <tr><td>Purchase entitlement and transaction information</td><td>Entitlement status on your device; transaction records at Apple / Google</td><td>Local status is updated when purchases are checked and removed with app data; Apple / Google retain transaction records under their policies</td></tr>
 </tbody></table>
