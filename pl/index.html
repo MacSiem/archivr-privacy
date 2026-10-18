@@ -79,7 +79,7 @@
 </ul>
 <p>Raporty diagnostyczne mogą również zawierać przybliżony kraj lub region. Nie określa to dokładnej lokalizacji.</p>
 <p>Raporty diagnostyczne obejmują też ustalone kategorie i kody przyczyn błędów, etapy i wyniki operacji, krótką ograniczoną historię stanów aplikacji i operacji, przedziały czasu oraz informację, czy wymagane pola powiadomienia były obecne i miały oczekiwany typ. Dane te pomagają rozróżnić przyczyny techniczne; nie obejmują treści powiadomień, tokenów push, nazw plików, zawartości archiwów ani haseł.</p>
-<p>Archivr filtruje ścieżki plików, pola haseł do archiwów i swobodne komunikaty diagnostyczne w mechanizmie raportowania oraz nie dołącza zawartości archiwów. Sentry nadal przetwarza techniczne metadane urządzenia i awarii, które mogą obejmować identyfikator urządzenia. Te zabezpieczenia nie oznaczają anonimowości danych diagnostycznych. Zdarzenia diagnostyczne są przechowywane zgodnie z ustawieniami retencji projektu Sentry, a następnie usuwane przez usługę. Napisz do nas w sprawie okresu dotyczącego Twojego zgłoszenia.</p>
+<p>Archivr filtruje ścieżki plików, pola haseł do archiwów i swobodne komunikaty diagnostyczne w mechanizmie raportowania oraz nie dołącza zawartości archiwów. Sentry nadal przetwarza techniczne metadane urządzenia i awarii, które mogą obejmować identyfikator urządzenia. Te zabezpieczenia nie oznaczają anonimowości danych diagnostycznych. W naszym obecnym planie Sentry Developer zdarzenia diagnostyczne są przechowywane przez 30 dni, a następnie usuwane przez usługę.</p>
 <h3>3.3 Reklamy (Unity Ads)</h3>
 <p>Archivr wyświetla nieinwazyjne reklamy na ekranach: Home, Result i Ustawienia (banner) oraz reklama interstitial po operacjach pakowania/rozpakowania. Reklamy są dostarczane przez <strong>Unity Ads</strong>, którego SDK zbiera:</p>
 <ul>
@@ -159,7 +159,7 @@
 <tr><td>Preferencje i historia operacji</td><td>Twoje urządzenie</td><td>Do usunięcia wpisów lub danych aplikacji; wyeksportowane pliki pozostają w wybranych przez Ciebie miejscach</td></tr>
 <tr><td>Klucz instalacji</td><td>Bezpieczny magazyn systemowy</td><td>Do usunięcia z magazynu; na iOS może pozostać po odinstalowaniu aplikacji</td></tr>
 <tr><td>Identyfikator reklamowy</td><td>Systemy Unity Ads</td><td>Zgodnie z polityką retencji Unity</td></tr>
-<tr><td>Dane awarii Sentry</td><td>Systemy Sentry</td><td>Zgodnie z ustawieniami retencji projektu Sentry; nie bezterminowo</td></tr>
+<tr><td>Dane awarii Sentry</td><td>Systemy Sentry</td><td>30 dni w naszym obecnym planie Sentry Developer</td></tr>
 <tr><td>Rejestracja i aktywność powiadomień push</td><td>Cloudflare Workers / KV</td><td>Do wyrejestrowania lub realizacji żądania usunięcia; obecnie nie skonfigurowano automatycznego wygasania</td></tr>
 <tr><td>Korespondencja wsparcia</td><td>Skrzynka wsparcia</td><td>Na czas rozwiązania zgłoszenia i, gdy konieczne, dalszej obsługi lub obowiązków prawnych</td></tr>
 <tr><td>Uprawnienia zakupowe i informacje o transakcjach</td><td>Status uprawnień na urządzeniu; rekordy transakcji w Apple / Google</td><td>Lokalny status jest aktualizowany podczas sprawdzania zakupów i usuwany wraz z danymi aplikacji; Apple / Google zachowują rekordy transakcji zgodnie ze swoimi politykami</td></tr>

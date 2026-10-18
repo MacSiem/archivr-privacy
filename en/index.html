@@ -79,7 +79,7 @@
 </ul>
 <p>Diagnostic reports may also contain an approximate country or region. This does not identify a precise location.</p>
 <p>Diagnostic reports also include predefined error categories and cause codes, operation stages and outcomes, a short bounded history of app lifecycle and operation states, duration ranges, and whether required notification fields were present and of the expected type. These fields help distinguish technical causes; they do not include notification text, push tokens, file names, archive contents or passwords.</p>
-<p>Archivr filters file paths, archive-password fields and free-form diagnostic messages in its reporting pipeline, and does not attach archive contents. Sentry still processes technical device and crash metadata, which may include a device identifier. These safeguards do not make diagnostic data anonymous. Diagnostic events are kept according to the Sentry project retention settings, then removed by the service. Contact us about the retention applicable to your report.</p>
+<p>Archivr filters file paths, archive-password fields and free-form diagnostic messages in its reporting pipeline, and does not attach archive contents. Sentry still processes technical device and crash metadata, which may include a device identifier. These safeguards do not make diagnostic data anonymous. Under our current Sentry Developer plan, diagnostic events are retained for 30 days and then removed by the service.</p>
 <h3>3.3 Advertising (Unity Ads)</h3>
 <p>Archivr shows non-invasive ads on Home, Result and Settings (banner) plus interstitial after pack/unpack operations. Ads are delivered by <strong>Unity Ads</strong>, whose SDK collects:</p>
 <ul>
@@ -159,7 +159,7 @@
 <tr><td>Preferences and operation history</td><td>Your device</td><td>Until deleted or app data is removed; exported files remain at the destinations you choose</td></tr>
 <tr><td>Installation credential</td><td>Operating system secure storage</td><td>Until removed from secure storage; on iOS it may survive app uninstallation</td></tr>
 <tr><td>Advertising ID</td><td>Unity Ads systems</td><td>Per Unity's retention policy</td></tr>
-<tr><td>Sentry crash data</td><td>Sentry systems</td><td>According to the Sentry project retention settings; not retained indefinitely</td></tr>
+<tr><td>Sentry crash data</td><td>Sentry systems</td><td>30 days under our current Sentry Developer plan</td></tr>
 <tr><td>Push notification registration and activity</td><td>Cloudflare Workers / KV</td><td>Until unregistering or fulfilling a deletion request; no automatic expiry is currently configured</td></tr>
 <tr><td>Support correspondence</td><td>Support mailbox</td><td>For resolving the request and, where necessary, handling follow-up or legal obligations</td></tr>
 <tr><td>Purchase entitlement and transaction information</td><td>Entitlement status on your device; transaction records at Apple / Google</td><td>Local status is updated when purchases are checked and removed with app data; Apple / Google retain transaction records under their policies</td></tr>
