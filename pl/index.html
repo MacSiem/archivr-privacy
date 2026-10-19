@@ -53,7 +53,7 @@
     </div>
 
 <h1>Polityka prywatności — Archivr</h1>
-<p>Ostatnia aktualizacja: 2026-10-09 · Data wejścia w życie: 2026-05-06</p>
+<p>Ostatnia aktualizacja: 2026-10-19 · Data wejścia w życie: 2026-05-06</p>
 <h2>1. Kim jesteśmy</h2>
 <p><strong>Archivr</strong> to aplikacja mobilna do <strong>pakowania, rozpakowywania i zabezpieczania hasłem archiwów</strong> (ZIP, 7z, TAR, TAR.GZ, RAR-read). Operacje na archiwach odbywają się <strong>lokalnie na urządzeniu</strong>; Archivr nie wysyła plików ani haseł do ich przetwarzania. Pliki lub informacje dla wsparcia mogą opuścić urządzenie, gdy zdecydujesz się je wyeksportować, udostępnić lub wysłać. Hasła do archiwów są używane w pamięci tymczasowej i nie są zapisywane w preferencjach aplikacji ani historii operacji.</p>
 <p><strong>Administrator danych:</strong> Maciej Siemiński — twórca aplikacji Archivr. <strong>Kontakt:</strong> <a href="mailto:mail@macsiem.dev">mail@macsiem.dev</a></p>
@@ -77,7 +77,9 @@
 <li>informacje o urządzeniu (model, wersja systemu, locale);</li>
 <li>wersję aplikacji i build number.</li>
 </ul>
-<p>Archivr filtruje ścieżki plików, pola haseł do archiwów i swobodne komunikaty diagnostyczne w mechanizmie raportowania oraz nie dołącza zawartości archiwów. Sentry nadal przetwarza techniczne metadane urządzenia i awarii, które mogą obejmować identyfikator urządzenia. Te zabezpieczenia nie oznaczają anonimowości danych diagnostycznych. Zdarzenia diagnostyczne są przechowywane zgodnie z ustawieniami retencji projektu Sentry, a następnie usuwane przez usługę. Napisz do nas w sprawie okresu dotyczącego Twojego zgłoszenia.</p>
+<p>Raporty diagnostyczne mogą również zawierać przybliżoną lokalizację, taką jak kraj, region lub miasto. Nie określa to dokładnej lokalizacji.</p>
+<p>Raporty diagnostyczne obejmują też ustalone kategorie i kody przyczyn błędów, etapy i wyniki operacji, krótką ograniczoną historię stanów aplikacji i operacji, przedziały czasu oraz informację, czy wymagane pola powiadomienia były obecne i miały oczekiwany typ. Dane te pomagają rozróżnić przyczyny techniczne; nie obejmują treści powiadomień, tokenów push, nazw plików, zawartości archiwów ani haseł.</p>
+<p>Archivr filtruje ścieżki plików, pola haseł do archiwów i swobodne komunikaty diagnostyczne w mechanizmie raportowania oraz nie dołącza zawartości archiwów. Sentry nadal przetwarza techniczne metadane urządzenia i awarii, które mogą obejmować identyfikator urządzenia. Te zabezpieczenia nie oznaczają anonimowości danych diagnostycznych. W naszym obecnym planie Sentry Developer zdarzenia diagnostyczne są przechowywane przez 30 dni, a następnie usuwane przez usługę.</p>
 <h3>3.3 Reklamy (Unity Ads)</h3>
 <p>Archivr wyświetla nieinwazyjne reklamy na ekranach: Home, Result i Ustawienia (banner) oraz reklama interstitial po operacjach pakowania/rozpakowania. Reklamy są dostarczane przez <strong>Unity Ads</strong>, którego SDK zbiera:</p>
 <ul>
@@ -157,7 +159,7 @@
 <tr><td>Preferencje i historia operacji</td><td>Twoje urządzenie</td><td>Do usunięcia wpisów lub danych aplikacji; wyeksportowane pliki pozostają w wybranych przez Ciebie miejscach</td></tr>
 <tr><td>Klucz instalacji</td><td>Bezpieczny magazyn systemowy</td><td>Do usunięcia z magazynu; na iOS może pozostać po odinstalowaniu aplikacji</td></tr>
 <tr><td>Identyfikator reklamowy</td><td>Systemy Unity Ads</td><td>Zgodnie z polityką retencji Unity</td></tr>
-<tr><td>Dane awarii Sentry</td><td>Systemy Sentry</td><td>Zgodnie z ustawieniami retencji projektu Sentry; nie bezterminowo</td></tr>
+<tr><td>Dane awarii Sentry</td><td>Systemy Sentry</td><td>30 dni w naszym obecnym planie Sentry Developer</td></tr>
 <tr><td>Rejestracja i aktywność powiadomień push</td><td>Cloudflare Workers / KV</td><td>Do wyrejestrowania lub realizacji żądania usunięcia; obecnie nie skonfigurowano automatycznego wygasania</td></tr>
 <tr><td>Korespondencja wsparcia</td><td>Skrzynka wsparcia</td><td>Na czas rozwiązania zgłoszenia i, gdy konieczne, dalszej obsługi lub obowiązków prawnych</td></tr>
 <tr><td>Uprawnienia zakupowe i informacje o transakcjach</td><td>Status uprawnień na urządzeniu; rekordy transakcji w Apple / Google</td><td>Lokalny status jest aktualizowany podczas sprawdzania zakupów i usuwany wraz z danymi aplikacji; Apple / Google zachowują rekordy transakcji zgodnie ze swoimi politykami</td></tr>
